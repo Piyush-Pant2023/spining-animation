@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right ,gray ,pink ,rgb(224, 121, 121));
+  }
+  
+  .container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 800px;
+  }
+  
+  .spinner {
+    width: 200px;
+    height: 150px;
+    background-color: #db1010;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 3s infinite linear;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotateY(deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotateX(360deg);
+    }
+  }
